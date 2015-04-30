@@ -1,8 +1,9 @@
 class Address
 
-  define_method(:initialize) do |first_name, last_name|
+  define_method(:initialize) do |first_name, last_name, birth_month|
     @first_name = first_name
     @last_name = last_name
+    @birth_month = birth_month
   end
 
   define_method(:first_name) do
@@ -11,5 +12,9 @@ class Address
 
   define_method(:last_name) do
     @last_name
+  end
+
+  define_method(:birth_month) do
+    @birth_month
   end
 end
