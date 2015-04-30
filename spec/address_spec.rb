@@ -1,6 +1,11 @@
 require('rspec')
 require('address')
 
+  describe(Address) do
+    before() do
+      Address.clear()
+    end
+
   describe("#first_name") do
     it("returns the first name on an entry") do
       test_address = Address.new("Bob", "Smith", "July")
@@ -35,4 +40,12 @@ require('address')
       expect(Address.all()).to(eq([test_address]))
     end
   end
-  
+
+  describe(".clear") do
+    it("empties out all of the saved addresses") do
+      Address.new("Bob", "Smith", "July").save()
+      Address.clear()
+      expect(Address.all()).to(eq([]))
+    end
+  end
+end
