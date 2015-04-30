@@ -34,4 +34,15 @@ class Address
   define_singleton_method(:clear) do
     @@all_address = []
   end
+
+  define_singleton_method(:find) do |identification|
+    found_address = nil
+    @@all_address.each() do |address|
+      if address.id().eql?(identification.to_i())
+        found_address = address
+      end
+    end
+    found_address
+  end
+    
 end

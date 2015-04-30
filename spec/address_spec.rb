@@ -55,5 +55,15 @@ require('address')
       test_address.save()
       expect(test_address.id()).to(eq(1))
     end
-  end 
+  end
+
+  describe(".find") do
+    it("returns a address by its id number") do
+      test_address = Address.new({:first_name => "Bob", :last_name => "Smith", :birth_month => "July"})
+      test_address.save()
+      test_address2 = Address.new({:first_name => "Sally", :last_name => "Jones", :birth_month => "October"})
+      test_address2.save
+      expect(Address.find(test_address.id())).to(eq(test_address))
+    end
+  end
 end
