@@ -1,0 +1,9 @@
+<h3>Here is <%= address.first_name() %> info</h3>
+
+  <ul>
+    <% @phone.each() do |bell| %>
+    <li><a href="/phone/<%= bell.id() %>"><%= bell.area_code() %> <%= bell.number() %> <%= bell.label() %></a></li>
+    <% end %>
+  </ul>
+
+  <a href = "/">Return to Main Page</a>

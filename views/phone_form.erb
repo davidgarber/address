@@ -1,0 +1,16 @@
+<h1>Add a phone number to <%= @address.first_name() %></h1>
+
+  <form action = "/phone" method = "post">
+    <input id = "address_id" name = "address_id" type = "hidden" value = "<% @address.id() %>">
+
+    <label for = "area_code"> Enter the area code: </label>
+    <input id = "area_code" name = "area_code" type = "text">
+
+    <label for = "number"> Enter the phone number: </label>
+    <input id = "number" name = "number" type = "text">
+
+    <label for = "label"> Enter the type of phone: </label>
+    <input id = "label" name = "label" type = "text">
+
+    <button type = "submit">Add Phone Number</button>
+  </form>

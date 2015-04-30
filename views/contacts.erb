@@ -1,0 +1,7 @@
+<h1>Contacts</h1>
+
+<ul>
+  <% @address.each() do |address| %>
+  <li><a href="/address/<%= address.id() %>"><%= address.first_name() %></a></li>
+  <% end %>
+</ul>
