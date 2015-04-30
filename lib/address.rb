@@ -1,5 +1,7 @@
 class Address
 
+  @@all_address = []
+
   define_method(:initialize) do |first_name, last_name, birth_month|
     @first_name = first_name
     @last_name = last_name
@@ -16,5 +18,9 @@ class Address
 
   define_method(:birth_month) do
     @birth_month
+  end
+
+  define_singleton_method(:all) do
+    @@all_address
   end
 end

@@ -21,3 +21,9 @@ require('address')
       expect(test_address.birth_month()).to(eq("July"))
     end
   end
+
+  describe(".all") do
+    it("is empty at first") do
+      expect(Address.all()).to(eq([]))
+    end
+  end
