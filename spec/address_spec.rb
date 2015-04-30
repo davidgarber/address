@@ -48,4 +48,12 @@ require('address')
       expect(Address.all()).to(eq([]))
     end
   end
+
+  describe("#id") do
+    it("returns the id of the address") do
+      test_address = Address.new({:first_name => "Bob", :last_name => "Smith", :birth_month => "July"})
+      test_address.save()
+      expect(test_address.id()).to(eq(1))
+    end
+  end 
 end

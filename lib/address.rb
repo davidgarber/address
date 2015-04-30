@@ -1,6 +1,6 @@
 class Address
 
-  attr_reader(:first_name, :last_name, :birth_month)
+  attr_reader(:first_name, :last_name, :birth_month, :id)
 
   @@all_address = []
 
@@ -8,6 +8,7 @@ class Address
     @first_name = attributes.fetch(:first_name)
     @last_name = attributes.fetch(:last_name)
     @birth_month = attributes.fetch(:birth_month)
+    @id = @@all_address.length().+(1)
   end
 
   # define_method(:first_name) do
