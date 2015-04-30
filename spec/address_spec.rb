@@ -27,3 +27,12 @@ require('address')
       expect(Address.all()).to(eq([]))
     end
   end
+
+  describe("#save") do
+    it("saves the entry") do
+      test_address = Address.new("Bob", "Smith", "July")
+      test_address.save()
+      expect(Address.all()).to(eq([test_address]))
+    end
+  end
+  
